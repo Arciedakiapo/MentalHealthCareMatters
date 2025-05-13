@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bayanihan sa Isipan: Mental Health Awareness</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Bayanihan sa Isipan 🇵🇭</h1>
+    <p>Promoting Mental Health Awareness for All Filipinos</p>
+  </header>
+
+  <!-- TAB BUTTONS -->
+  <div class="tab-buttons">
+    <button class="tab-link active" onclick="openTab(event, 'about')">🧠 About Mental Health</button>
+    <button class="tab-link" onclick="openTab(event, 'issues')">⚠️ Common Issues</button>
+    <button class="tab-link" onclick="openTab(event, 'resources')">📞 Help Resources</button>
+    <button class="tab-link" onclick="openTab(event, 'stories')">🗣️ Stories</button>
+    <button class="tab-link" onclick="openTab(event, 'contact')">💬 Contact</button>
+  </div>
+
+  <!-- TAB CONTENT -->
+  <div id="about" class="tab-content" style="display: block;">
+    <h2>🧠 What is Mental Health?</h2>
+    <p>Mental health affects how we think, feel, and act. In the Philippines, many still hide their struggles due to stigma. Let’s change that—together.</p>
+    <img src="https://images.unsplash.com/photo-1591235318527-4c08d2f43b21" alt="Filipino youth" />
+  </div>
+
+  <div id="issues" class="tab-content">
+    <h2>⚠️ Common Mental Health Issues</h2>
+    <ul>
+      <li><strong>Depression</strong>: Affects millions of Filipinos</li>
+      <li><strong>Anxiety</strong>: Especially among students and workers</li>
+      <li><strong>Suicide</strong>: Leading cause of death in young people</li>
+      <li><strong>Stigma</strong>: Prevents people from seeking help</li>
+    </ul>
+  </div>
+
+  <div id="resources" class="tab-content">
+    <h2>📞 Where to Get Help</h2>
+    <ul>
+      <li><strong>NCMH Hotline:</strong> 1553</li>
+      <li><strong>Hopeline PH:</strong> 0917-558-4673</li>
+      <li><strong>Mind You PH:</strong> <a href="https://www.mindyou.com.ph" target="_blank">mindyou.com.ph</a></li>
+    </ul>
+  </div>
+
+  <div id="stories" class="tab-content">
+    <h2>🗣️ Real Stories</h2>
+    <blockquote>"I didn’t know I had depression until I talked to someone. Help is out there." – Bea, Manila</blockquote>
+    <blockquote>"After Yolanda, therapy helped me recover emotionally." – Jun, Tacloban</blockquote>
+  </div>
+
+  <div id="contact" class="tab-content">
+    <h2>💬 Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <textarea placeholder="Your Message" rows="4" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </div>
+
+  <footer>
+    <p>© 2025 Bayanihan sa Isipan. All rights reserved.</p>
+  </footer>
+
+  <!-- TABS SCRIPT -->
+  <script>
+    function openTab(evt, tabName) {
+      const tabContents = document.getElementsByClassName("tab-content");
+      const tabLinks = document.getElementsByClassName("tab-link");
+
+      // Hide all tab content
+      for (let i = 0; i < tabContents.length; i++) {
+        tabContents[i].style.display = "none";
+      }
+
+      // Remove 'active' from all buttons
+      for (let i = 0; i < tabLinks.length; i++) {
+        tabLinks[i].classList.remove("active");
+      }
+
+      // Show the current tab and add 'active' class
+      document.getElementById(tabName).style.display = "block";
+      evt.currentTarget.classList.add("active");
+    }
+  </script>
+</body>
+</html>
